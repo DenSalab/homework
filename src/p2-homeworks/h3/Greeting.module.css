@@ -1,0 +1,7 @@
+.normal {
+    outline: 0;
+    outline-offset: 0;
+}
+.error{
+    border: 1px solid red;
+}

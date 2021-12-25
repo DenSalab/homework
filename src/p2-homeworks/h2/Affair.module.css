@@ -1,0 +1,18 @@
+.affair{
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    justify-content: space-around;
+}
+.highPriority, .lowPriority, .middlePriority{
+    font-weight: bold;
+}
+.highPriority{
+    color: #c90000;
+}
+.lowPriority{
+    color:green
+}
+.middlePriority{
+    color: #a29f0b
+}
