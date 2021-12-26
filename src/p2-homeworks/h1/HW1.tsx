@@ -12,7 +12,7 @@ function HW1() {
     return (
         <div>
             <hr/>
-            <span>homeworks 1</span>
+            <span>Домашка №1</span>
 
             <Message
                 avatar={messageData.avatar}
