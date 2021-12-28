@@ -4,17 +4,17 @@ import HW2 from '../../h2/HW2'
 import HW3 from '../../h3/HW3'
 import HW4 from '../../h4/HW4'
 
-function PreJunior() {
+function JuniorPlus() {
     return (
         <div>
-            <HW1/>
-            <HW2/>
-            <HW3/>
-            <HW4/>
+            {/*<HW1/>*/}
+            {/*<HW2/>*/}
+            {/*<HW3/>*/}
+            {/*<HW4/>*/}
             {/*<HW6/>*/}
-
+            Junior+
         </div>
     )
 }
 
-export default PreJunior
+export default JuniorPlus

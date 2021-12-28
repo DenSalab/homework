@@ -1,0 +1,23 @@
+.wrapper{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.errorType{
+    color: #626970;
+    font-weight: bold;
+    font-size: 5em;
+}
+
+.title{
+    color: red;
+    font-size: 1.5em;
+
+}
+
+.gif{
+    margin-top: -50px;
+    width: 200px;
+}

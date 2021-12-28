@@ -1,0 +1,28 @@
+.wrapper{
+    margin-top: 5px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: -175px;
+    transition: left 800ms;
+    cursor: pointer;
+}
+.wrapper:hover{
+    left: 0;
+    transition: left 800ms;
+}
+.button{
+    width: 25px;
+    height: 25px;
+    border-bottom-right-radius: 10px;
+    background-color: #608070;
+}
+
+.link{
+    text-decoration: none;
+    color: #42a5f5;
+}
+.link:hover{
+    color: #c90000;
+}
