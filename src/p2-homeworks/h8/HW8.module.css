@@ -1,0 +1,38 @@
+.person {
+    width: 350px;
+    background-color: white;
+    color: #727272;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.person:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.person:hover > .age {
+    color: #c90000;
+}
+
+.age {
+    color: #006fc9;
+}
+
+.sortButton {
+    margin: 5px 5px 5px 0;
+}
+
+.sort {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 190px;
+}
+
+.radioBox {
+    display: grid;
+}
