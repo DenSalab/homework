@@ -6,7 +6,7 @@ type ActionType = {
     payload: string | number
     sort?: 'name' | 'age'
 }
-export const homeWorkReducer = (state: UserType, action: ActionType): UserType => {
+export const homeWorkReducer = (state: Array<UserType>, action: ActionType): Array<UserType> => {
     const newState = [...state];
     switch (action.type) {
         case 'sort': {

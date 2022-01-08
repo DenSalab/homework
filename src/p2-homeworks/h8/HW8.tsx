@@ -3,14 +3,13 @@ import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './HW8.module.css'
 
-type PeopleType = {
+export type UserType = {
     _id: number
     name: string
     age: number
 }
-export type UserType = PeopleType[]
 
-const initialPeople: UserType = [
+const initialPeople: Array<UserType> = [
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
     {_id: 2, name: 'Коля', age: 16},
@@ -20,13 +19,13 @@ const initialPeople: UserType = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<UserType>(initialPeople)
+    const [people, setPeople] = useState<Array<UserType>>(initialPeople)
     const [sort, setSort] = useState<'name' | 'age'>('name');
 
     const sortNameHandler = () => setSort('name');
     const sortAgeHandler = () => setSort('age');
 
-    const finalPeople = people.map((p: PeopleType) => (
+    const finalPeople = people.map((p: UserType) => (
         <div key={p._id} className={s.person}>
             <span className={s.name}>{p.name}</span>
             <span className={s.age}>{p.age}</span>
@@ -69,7 +68,6 @@ function HW8() {
                 <SuperButton className={s.sortButton} onClick={checkAge}>check 18</SuperButton>
             </div>
 
-            <hr/>
             <hr/>
         </div>
     )
