@@ -27,7 +27,7 @@ function Clock() {
         setShow(false);
     }
 
-    const addZero = (num: number) => String(num).length < 2 ? `0${num}` : `${num}`;
+    const addZero = (num: number) => num < 10 ? `0${num}` : num;
 
     let hours = addZero(date.getHours());
     let minutes = addZero(date.getMinutes());
