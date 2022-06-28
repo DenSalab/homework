@@ -14,10 +14,17 @@
     color: aqua;
 }
 
-.some {
+.green {
     background: lightgreen;
 }
 
-.some-text {
+.green-text {
     color: darkslateblue;
+}
+.blue {
+    background: rgba(0, 0, 255, 0.41);
+}
+
+.blue-text {
+    color: #fa3636;
 }
