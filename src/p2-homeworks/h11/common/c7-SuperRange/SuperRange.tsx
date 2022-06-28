@@ -1,5 +1,5 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
-import s from './SuperRange.module.css'
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useEffect, useRef} from 'react'
+import s from '../style/SuperRange.module.css';
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -19,16 +19,23 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
+    const range: any = useRef(null);
+    useEffect(() => {
+        if (range.current) {
+            range.current.style.width = `${restProps.value}%`;
+        }
+    }, [restProps.value]);
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange && onChange(e) // сохраняем старую функциональность
 
         onChangeRange && onChangeRange(+e.currentTarget.value)
     }
 
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
+    const finalRangeClassName = `${s.thumb}  ${s.thumbLeft} ${className ? className : ''}`
 
     return (
-        <>
+        <div className={s.container}>
             <input
                 type={'range'}
                 onChange={onChangeCallback}
@@ -36,7 +43,11 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-        </>
+            <div className={s.slider}>
+                <div className={s.sliderTrack}/>
+                <div ref={range} className={s.sliderRange}/>
+            </div>
+        </div>
     )
 }
 
