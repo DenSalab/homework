@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import s from "../Example/Example.module.css";
+import s from "./Clock.module.css";
 
 function AlternativeClock() {
     let getTime = () => Date().substring(16, 24);

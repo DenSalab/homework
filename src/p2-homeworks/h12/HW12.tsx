@@ -2,7 +2,7 @@ import React from "react";
 import s from "./HW12.module.css";
 import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 import {useDispatch, useSelector} from "react-redux";
-import {changeThemeAC} from "../h10/bll/themeReducer";
+import {changeThemeAC} from "./bll/themeReducer";
 import {AppStoreType} from "../h10/bll/store";
 
 const themes = ['dark', 'red', 'green', 'blue'];
